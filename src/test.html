@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<style type="text/css">
+
+    #navbar {
+        width:100%;
+        height:40px;
+        background-color:#000;
+    }
+
+    #navbar ul {
+        width:80%;
+        margin:0 auto 0 auto;
+    }
+
+    #navbar ul li {
+        float:left;
+        color:#CC0000;
+        padding:0 20px 0 20px;
+        border-right:1px solid #FFF;
+        border-left:1px solid #FFF;
+        height:40px;
+        list-style:none;
+        display:block;
+        line-height:40px;
+        text-align:center;
+        cursor:pointer;
+    }
+
+    #navbar ul li:hover {
+        background-color:#CCC;
+    }
+
+</style>
+<div id="navbar">
+
+    <ul>
+        <li onclick=getAccountInfo()>Account Info</li>
+        <li>Get All Offers</li>
+        <li>Buy Specific Offer</li>
+        <li>Set Offer for Sale</li>
+        <li onclick=test()>Exchange Rate</li>
+        <li>
+        <a href="Mathi.html">test</a>
+        </li>
+    </ul>
+
+</div>
+
+<div id="AccountInfo">
+
+
+</div>
+<!-- ACCOUNT INFO, GET ALL OFFERS, BUY SPECIFIC OFFER, SET OFFER FOR SALE ,EXCHANGE RATE -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/API.js"></script>
+
+</body>
+</html>

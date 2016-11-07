@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/API.js"></script>
+    <script src="css/css.css"></script>
+    <title>Bank</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+
+<!-- ACCOUNT INFO, GET ALL OFFERS, BUY SPECIFIC OFFER, SET OFFER FOR SALE ,EXCHANGE RATE -->
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+            <a class="navbar-brand" href="#">Bank</a>
+
+        <ul class="nav navbar-nav">
+            <li onclick="getAccountInfo()"><a data-toggle="tab" href="#home">Home</a></li>
+            <li onclick="getAllOffers()"><a data-toggle="tab" href="#allOffers">All Offers</a></li>
+            <li><a data-toggle="tab" href="#setOfferForSale">Set Offer</a></li>
+            <li onclick="getExchangeRate()"><a data-toggle="tab" href="#exchangeRate">Exchange Rate</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="tab-content" id="tabContent">
+    <div id="home" class="tab-pane fade in active">
+        <h3 id="Phead">Profile</h3>
+        <div id="homeDiv" class="well">
+        <p id="PUser"></p>
+        <p id="PAmount"></p>
+        <p id="Pcurrency"></p>
+        </div>
+    </div>
+    <div id="allOffers" class="tab-pane fade">
+        <h3>Buy offer</h3>
+        <div class="well">
+        <p>Offer ID: <span><input type="number" id="offerID"> <button type="button" class="btn btn-primary" id="buyOfferBtn" onclick=buyOffer()>Buy offer</button></span></p>
+    </div>
+    <div>
+        <h3>All offers</h3>
+        <table class="table table-hover" id="allOfferTable">
+        <thead class="th">
+            <tr>
+                <th>ID</th>
+                <th>Amount</th>
+                <th>Currency</th>
+                <th>Since</th>
+            </tr>
+        </thead>
+            <tbody id="offres_tbl">
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <div id="setOfferForSale" class="tab-pane fade">
+        <h3>Offer for sale</h3>
+        <div class="well">
+        <p>Sell amount: <span><input type="number" id="sellInputField"> <button class="btn btn-primary" onclick=setOffers()>Set Offer</button></span></p>
+        </div>
+    </div>
+    <div id="exchangeRate" class="tab-pane fade">
+        <h3>Exchange Rate</h3>
+        <div class="well">
+            from <span><select id="fromCurrency" onchange=calculateExchangeRate()></select>
+        <span>to </span>  <select id="toCurrency" onchange=calculateExchangeRate()></select>
+        <button class="btn btn-primary" onclick=calculateExchangeRate()>Get rate</button></span>
+        <p id="exchangeAmount"> Exchange Rate: </p>
+        </div>
+        <table class="table table-hover" onclick="getCurrencyElement()">
+            <thead class=th">
+                <tr>
+                    <th>Currencies for sale</th>
+                </tr>
+            </thead>
+            <tbody id="exchangeTbl">
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+/*
+body{
+    background-image: url("http://therichest.imgix.net/2016/05/Psy_money-1.jpg?auto=format&q=100&lossless=1&w=1063&h=557&fit=crop");
+}
+*/
+
+body{
+    //overflow: hidden;
+    color: rgba(41, 42, 45, 0.77);
+    font-size: 14px;
+}
+
+#tabContent{
+    padding: 5px;
+}
+
+.well{
+    background-color: rgba(99, 229, 240, 0.25);
+    box-shadow: 4px 4px 8px #CCCCCC;
+    padding: 10px;
+}
+
+#homeDiv {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#allOfferTable{
+    overflow: scroll;
+    height: 100%;
+    border: medium;
+    position: absolute;
+}
+
+.th{
+    background-color: rgba(99, 229, 240, 0.25);
+}
+
+.btn-primary{
+    box-shadow: 4px 4px 8px #CCCCCC;
+}
+
+#fromCurrency,
+#toCurrency {
+    background-color: aqua;
+    font-size: 14px;
+    padding: 2px 10px;
+
+}
